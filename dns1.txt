@@ -1,0 +1,44 @@
+cp -R /etc/bind/db.local /etc/bind/wpsyahrul.net
+@       IN      SOA     wpsyahrul.net. root.wpsyahrul.net. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      wpsyahrul.net.
+@       IN      A       10.10.10.79
+www.wpsyahrul.net.      IN      CNAME   wpsyahrul.net.
+
+cp -R /etc/bind/db.127 /etc/bind/wpsyahrul.net.reverse
+@       IN      SOA     wpsyahrul.net. root.wpsyahrul.net. (
+                              1         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      wpsyahrul.net.
+79      IN      PTR     wpsyahrul.net.
+79      IN      PTR     www.wpsyahrul.net.
+
+/etc/bind/named.conf.local               
+//include "/etc/bind/zones.rfc1918";
+
+zone "wpsyahrul.net" {
+        type master;
+        file "/etc/bind/wpsyahrul.net";
+};
+
+zone "10.10.10.in-addr.arpa" {
+        type master;
+        file "/etc/bind/wpsyahrul.net.reverse";
+};
+
+/etc/resolv.conf
+nameserver 10.10.10.79
+search wpsyahrul.net
+
+systemctl restart named.service
+nslookup 10.10.10.79 + wpsyahrul.net
+ping cmd
