@@ -1,0 +1,23 @@
+/etc/nginx/sites-available/wpsyahrul.net.conf                                                        
+server {
+    listen 80;
+    server_name www.wpsyahrul.net wpsyahrul.net 10.10.10.79;
+
+    root /var/www/html/wordpress;
+    index index.php index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+
+nginx -t
+ln -s /etc/nginx/sites-available/wpsyahrul.net.conf /etc/nginx/sites-enabled/
+systemctl reload nginx.service
