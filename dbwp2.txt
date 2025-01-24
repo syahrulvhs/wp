@@ -1,0 +1,14 @@
+mysql -u root
+create database wp_db;
+grant all on wp_db.* to 'wp_user'@'localhost' identified by 'zxcv1234' with grant option;
+flush privileges;
+
+wget https://wordpress.org/latest.tar.gz
+tar xf latest.tar.gz
+mv wordpress /var/www/html/
+cp -R /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
+define( 'DB_NAME', 'wp_db' );
+define( 'DB_USER', 'wp_user' );
+define( 'DB_PASSWORD', 'zxcv1234' );
+
+chown -R www-data:www-data /var/www/html/wordpress/
