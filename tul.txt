@@ -1,10 +1,10 @@
-1. Melakukan pemasangan UPS sebagai daya cadangan untuk melindungi dari mati listrik secara mendadak dan Stabilizer Listrik untuk melindungi dari tegangan listrik yang sering naik turun
-2. Motherboard, CPU, Ram, Penyimpanan (HDD/SSD), PSU, Cooling
-3. Gunakan perintah "cat /etc/os-release"
+1. Melakukan pemasangan UPS (uninterruptible power supply) sebagai daya cadangan untuk melindungi dari mati listrik secara mendadak dan Stabilizer Listrik untuk melindungi dari tegangan listrik yang sering naik turun
+2. Motherboard, CPU (central processing unit), RAM (random acces memory), Penyimpanan/Disk (HDD/SSD), PSU (power supply unit), Cooling
+3. Ubuntu: "cat /etc/os-release" Win:"winver"
 4. Ya, matikan perangkat terlebih dahulu setelah itu baru diperbaiki, dampak kipas tidak berputar semestinya adalah performa perangkat menurun, overheat, perangkat mati tiba-tiba, dan kerusakan hardware
-5. iDRAC untuk server Dell
+5. iDRAC untuk server Dell EMC
 6. Sistem operasi yang kode sumbernya tersedia untuk umum, dapat dimodifikasi oleh siapa saja, dan dapat digunakan secara gratis
-7. Gunakan package Bind9, PHP, MariaDB/MySQL, Apache/Nginx, dan App Wordpress. Konfigurasi Bind9 sebagai DNS Server agar website bisa di search menggunakan domain, konfigurasi MariaDB sebagai Database untuk menyimpan data wordpress, terakhir konfigurasi wordpress dan nginx sebagai web server untuk menerima permintaan HTTP atau HTTPS dari web browser. PHP sebagai bahasa pemrograman yang digunakan wordpres.
-8. Dengan memperbarui sistem operasi, melakukan backup data, menjaga keamanan, mengecek hardware secara berkala
+7. instalasi package Bind9, PHP, MariaDB/MySQL, Apache/Nginx. konfigurasi bind9 sebagai dns server, membuat database dan user untuk wordpress dengan MariaDB, lakukan pemasangan wordpress sebagai layanan Utama, konfigurasi nginx dengan menambahkan php agar wordpress dapat berjalan normal
+8. Dengan memperbarui sistem operasi, melakukan backup data, menjaga keamanan cth: pemantauan log dan system, mengecek hardware secara berkala
 9. Masuk ke web interface, pilih node, buka tab Backup, klik file backup, pilih Restore, atur konfigurasi jika diperlukan, lalu jalankan proses hingga selesai lalu cek apakah VM berjalan normal
 10. Masuk ke web interface, pilih VM, buka tab Backup, klik Backup Now, pilih storage tujuan dan mode backup (Snapshot/Stop), lalu jalankan proses hingga selesai.
