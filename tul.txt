@@ -4,7 +4,7 @@
 4. Ya, matikan perangkat terlebih dahulu setelah itu baru diperbaiki, dampak kipas tidak berputar semestinya adalah performa perangkat menurun, overheat, perangkat mati tiba-tiba, dan kerusakan hardware
 5. iDRAC untuk server Dell EMC
 6. Sistem operasi yang kode sumbernya tersedia untuk umum, dapat dimodifikasi oleh siapa saja, dan dapat digunakan secara gratis
-7. instalasi package Bind9, PHP, MariaDB/MySQL, Apache/Nginx. konfigurasi bind9 sebagai dns server, membuat database dan user untuk wordpress dengan MariaDB, lakukan pemasangan wordpress sebagai layanan Utama, konfigurasi nginx dengan menambahkan php agar wordpress dapat berjalan normal
+7. instalasi package Bind9, PHP, MariaDB/MySQL, Apache/Nginx. konfigurasi bind9 sebagai dns server, membuat database dan user untuk wordpress dengan MariaDB, lakukan pemasangan wordpress sebagai layanan/aplikasi Utama, konfigurasi nginx dengan menambahkan php didalamnya sebagai Bahasa pemrograman wordpress
 8. Dengan memperbarui sistem operasi, melakukan backup data, menjaga keamanan cth: pemantauan log dan system, mengecek hardware secara berkala
 9. Masuk ke web interface, pilih node, buka tab Backup, klik file backup, pilih Restore, atur konfigurasi jika diperlukan, lalu jalankan proses hingga selesai lalu cek apakah VM berjalan normal
 10. Masuk ke web interface, pilih VM, buka tab Backup, klik Backup Now, pilih storage tujuan dan mode backup (Snapshot/Stop), lalu jalankan proses hingga selesai.
