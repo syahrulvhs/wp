@@ -1,6 +1,6 @@
 1. Melakukan pemasangan UPS (uninterruptible power supply) sebagai daya cadangan untuk melindungi dari mati listrik secara mendadak dan Stabilizer Listrik untuk melindungi dari tegangan listrik yang sering naik turun
 2. Motherboard, CPU (central processing unit), RAM (random acces memory), Penyimpanan/Disk (HDD/SSD), PSU (power supply unit), Cooling
-3. Ubuntu: "cat /etc/os-release" Win:"winver"
+3. jalankan perintah, Ubuntu: "cat /etc/os-release" Win:"winver"
 4. Ya, matikan perangkat terlebih dahulu setelah itu baru diperbaiki, dampak kipas tidak berputar semestinya adalah performa perangkat menurun, overheat, perangkat mati tiba-tiba, dan kerusakan hardware
 5. iDRAC untuk server Dell EMC
 6. Sistem operasi yang kode sumbernya tersedia untuk umum, dapat dimodifikasi oleh siapa saja, dan dapat digunakan secara gratis
